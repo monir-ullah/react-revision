@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+div#root {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 .btn-style {
   background-color: aliceblue;
   border: 1px solid red;
