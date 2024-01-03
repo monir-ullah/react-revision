@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-style {
+  background-color: aliceblue;
+  border: 1px solid red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0px 50px;
+}
