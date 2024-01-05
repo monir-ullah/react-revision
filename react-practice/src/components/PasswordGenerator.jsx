@@ -46,7 +46,7 @@ function PasswordGenerator() {
     <div className="w-screen grid h-screen justify-center items-center">
       <div className="container mx-auto  w-full ">
         <h1 className="text-3xl text-gray-800 font-semibold	 text-center">
-          Change Background Password with React <span>(Project 2)</span>
+          Password Generator with React <span>(Project 2)</span>
         </h1>
 
         <div className="mt-5">
@@ -71,17 +71,23 @@ function PasswordGenerator() {
             <div>
               <input
                 type="range"
+                id="stringLengthRange"
                 onChange={(event) => setPassLength(event.target.value)}
                 name="stringLengthRange"
                 min={6}
               />
-              <label htmlFor="stringLengthRange" className="ml-2">
+              <label
+                htmlFor="stringLengthRange"
+                id="stringLengthRange"
+                className="ml-2"
+              >
                 Length: {passLength}
               </label>
             </div>
             <div>
               <input
                 type="checkbox"
+                id="allowNumber"
                 name="allowNumber"
                 defaultChecked={allowSpecialChar}
                 onChange={() => {
@@ -90,7 +96,7 @@ function PasswordGenerator() {
                   });
                 }}
               />
-              <label htmlFor="allowNumber" className="ml-2">
+              <label htmlFor="allowNumber" id="allowNumber" className="ml-2">
                 Include Number?
               </label>
             </div>
@@ -98,6 +104,7 @@ function PasswordGenerator() {
               <input
                 type="checkbox"
                 name="allowSpecialChar"
+                id="allowSpecialChar"
                 defaultChecked={allowNumber}
                 onChange={() => {
                   setAllowSpecialChar((prev) => {
@@ -105,7 +112,11 @@ function PasswordGenerator() {
                   });
                 }}
               />
-              <label htmlFor="allowSpecialChar" className="ml-2">
+              <label
+                htmlFor="allowSpecialChar"
+                id="allowSpecialChar"
+                className="ml-2"
+              >
                 Include Character?
               </label>
             </div>
