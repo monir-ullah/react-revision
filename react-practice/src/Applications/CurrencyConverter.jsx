@@ -14,15 +14,15 @@ function CurrencyConverter() {
 
   return (
     <div
-      className="w-screen grid h-screen justify-center items-center opacity-90 py-14"
+      className="grid items-center justify-center w-screen h-screen opacity-90 py-14"
       style={{
         backgroundImage: `url("https://cdn.pixabay.com/photo/2017/07/30/10/00/economy-2553884_1280.jpg")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      <div className="container mx-auto backdrop-blur-sm bg-white/30 p-10 rounded-md 	drop-shadow-2xl">
-        <h1 className="text-3xl text-slate-100 font-semibold	pb-5 text-center">
+      <div className="container p-10 mx-auto rounded-md backdrop-blur-sm bg-white/30 drop-shadow-2xl">
+        <h1 className="pb-5 text-3xl font-semibold text-center text-slate-100">
           Currency Converter <span>(Project 3)</span>
         </h1>
 
@@ -50,7 +50,7 @@ function CurrencyConverter() {
               setAmount(convertedAmount);
               setConvertedAmount(amount);
             }}
-            className="bg-blue-600 w-1/4 hover:bg-blue-800 -mb-3 py-2 px-5 text-slate-100  rounded-md relative shadow-lg"
+            className="relative w-1/4 px-5 py-2 -mb-3 bg-blue-600 rounded-md shadow-lg hover:bg-blue-800 text-slate-100"
           >
             Swap
           </button>
@@ -62,7 +62,7 @@ function CurrencyConverter() {
             onCurrencyChange={(currency) => setTo(currency)}
             selectedCurrency={to}
           />
-          <button className="w-full bg-blue-600 rounded-md hover:bg-blue-800 py-3 text-slate-100 shadow-lg my-5">
+          <button className="w-full py-3 my-5 mt-8 bg-blue-600 rounded-md shadow-lg hover:bg-blue-800 text-slate-100">
             Convert Currency {from.toUpperCase()} to {to.toUpperCase()}
           </button>
         </form>
